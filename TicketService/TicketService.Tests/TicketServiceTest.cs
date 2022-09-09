@@ -30,7 +30,7 @@ namespace TicketService.Tests
 
             // Assert
             Assert.Equal(expectedPrice, result);
-            providerMock.Verify(x => x.GetPriceForAdult(), Times.Once);
+            providerMock.Verify(x => x.GetPriceForAdult(), Times.Never);
             providerMock.Verify(x => x.GetPriceForChild(), Times.Never);
         }
     }
